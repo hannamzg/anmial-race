@@ -1,0 +1,100 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainDiv{
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: 400px;
+    background-color: blueviolet;
+}
+
+.anmailDiv{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+#DivDog{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+#dogIcon{
+    
+    background-color: darkolivegreen;
+    width: 50px;
+}
+
+#DivHourse{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(201, 46, 46);
+}
+
+#hourseIcon{
+    background-color: darkolivegreen;
+    width: 50px;
+}
+
+#DivDuke{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(40, 215, 17);
+}
+
+#duckIcone{
+    width: 50px;
+}
+
+#DivChiken{
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid black;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(45, 111, 234);
+}
+
+#chickIcon{
+    width: 50px;
+}
+
+.theFinishDiv{
+    width: 100px;
+    height: 100%;
+    background-color: aqua;
+}
+
+
+#startTheGame{
+    border-radius: 10px;
+    padding: 20px;
+    margin-inline: 20px;
+    font-size: 20px;
+    background-image: linear-gradient(#ade8f4, #023e8a,#6930c3);
+    color: white;
+    cursor: pointer;
+}
