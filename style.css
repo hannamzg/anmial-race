@@ -15,6 +15,7 @@ body{
     display: flex;
     justify-content: space-between;
     width: 1200px;
+    max-width: 1200px;
     height: 400px;
     background-color: blueviolet;
 }
@@ -90,6 +91,16 @@ body{
 
 
 #startTheGame{
+    border-radius: 10px;
+    padding: 20px;
+    margin-inline: 20px;
+    font-size: 20px;
+    background-image: linear-gradient(#ade8f4, #023e8a,#6930c3);
+    color: white;
+    cursor: pointer;
+}
+
+#restartBtn{
     border-radius: 10px;
     padding: 20px;
     margin-inline: 20px;

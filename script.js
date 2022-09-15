@@ -36,6 +36,7 @@ let runners = {
         "step": 30,
     }
 }
+
 buildImgs();
 function buildImgs(){ 
     
@@ -62,10 +63,11 @@ function buildImgs(){
     DivChiken.appendChild(img4);
 
     restartBtn.addEventListener("click",()=>{
-        img1.style.marginInlineStart = "0px";
+        /* img1.style.marginInlineStart = "0px";
        img2.style.marginInlineStart = "0px";
        img3.style.marginInlineStart = "0px";
-       img4.style.marginInlineStart = "0px";
+       img4.style.marginInlineStart = "0px"; */
+       location.reload();
     }) 
 
     let dataSpeed ={
@@ -82,6 +84,7 @@ function buildImgs(){
     img3.style.marginInlineStart = dataSpeed.c + "px";
     img4.style.marginInlineStart = dataSpeed.d + "px";
     move(runners.dog.step,runners.hourse.step,runners.duck.step,runners.chick.step);
+    
     }
     
     function move(one,two,three,four){
@@ -98,29 +101,29 @@ function buildImgs(){
         let str3 =  img3.style.marginInlineStart.substring(0, img3.style.marginInlineStart.length -2);
         let str4 =  img4.style.marginInlineStart.substring(0, img4.style.marginInlineStart.length -2);
           
-        if(Number(str1) > Number(anmailDiv.offsetWidth) -50){
+        if(Number(str1) > Number(anmailDiv.offsetWidth) -80){
             alert("1 is win");
             clearInterval(startSet);
         }
-        if(Number(str2) > Number(anmailDiv.offsetWidth) -50){
+        if(Number(str2) > Number(anmailDiv.offsetWidth) -80){
             alert("2 is win");
             clearInterval(startSet);
         }
-        if(Number(str3) > Number(anmailDiv.offsetWidth) -50){
+        if(Number(str3) > Number(anmailDiv.offsetWidth) -80){
             alert("3 is win");
             clearInterval(startSet);
         }
-        if(Number(str4) > Number(anmailDiv.offsetWidth) -50){
+        if(Number(str4) > Number(anmailDiv.offsetWidth) -80){
             alert("4 is win");
             clearInterval(startSet);
         }
     }
 
-      
+    
     let startSet = setInterval(startTheGamee, 1000);
-    startTheGame.addEventListener("click" , ()=>{
-        startSet
-    });
+    /* startTheGame.addEventListener("click" , ()=>{
+      
+    }) */
 
     function startTheGamee(){
         run();
