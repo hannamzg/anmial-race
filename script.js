@@ -5,6 +5,14 @@ let DivChiken = document.getElementById("DivChiken");
 let anmailDiv = document.querySelector(".anmailDiv");
 let startTheGame = document.getElementById("startTheGame");
 let restartBtn = document.getElementById("restartBtn");
+let choseYourPlayer = document.getElementsByClassName("choseYourPlayer");
+let mYPoitis = document.getElementById("mYPoitis");
+var theWineer = "";
+var theCheckBoxAnser ="";
+var myPoites = 0;
+
+
+
 
 let runners = {
     dog:{
@@ -95,7 +103,7 @@ function buildImgs(){
     }
     
 
-    function check(){
+    function check(){            
         let str1 =  img1.style.marginInlineStart.substring(0, img1.style.marginInlineStart.length -2);
         let str2 =  img2.style.marginInlineStart.substring(0, img2.style.marginInlineStart.length -2);
         let str3 =  img3.style.marginInlineStart.substring(0, img3.style.marginInlineStart.length -2);
@@ -103,34 +111,72 @@ function buildImgs(){
           
         if(Number(str1) > Number(anmailDiv.offsetWidth) -80){
             alert("1 is win");
+            theWineer = "dog"
             clearInterval(startSet);
         }
         if(Number(str2) > Number(anmailDiv.offsetWidth) -80){
             alert("2 is win");
+            theWineer = "hourse"
             clearInterval(startSet);
         }
         if(Number(str3) > Number(anmailDiv.offsetWidth) -80){
             alert("3 is win");
+            theWineer = "duck"
             clearInterval(startSet);
         }
         if(Number(str4) > Number(anmailDiv.offsetWidth) -80){
             alert("4 is win");
+            theWineer = "chick"
             clearInterval(startSet);
         }
-    }
 
-    
+        for(let i=0; i<choseYourPlayer.length; i++){
+            choseYourPlayer[i].onclick = function(e){
+                if(e.target.value === "hourse"){
+                    theCheckBoxAnser = "hourse"
+                }
+                if(e.target.value === "dog"){
+                    theCheckBoxAnser = "dog"
+                }
+                if(e.target.value === "duck"){
+                    theCheckBoxAnser = "duck"
+                }
+                if(e.target.value === "chick"){
+                    theCheckBoxAnser = "chick"
+                }
+            }
+        }
+
+        if(theCheckBoxAnser === "hourse" && theWineer ==="hourse"){
+            myPoites += 100;
+            mYPoitis.innerHTML = `your pointes `+myPoites+``;
+        }
+        if(theCheckBoxAnser === "dog" && theWineer ==="dog"){
+            myPoites += 100;
+            mYPoitis.innerHTML = `your pointes `+myPoites+``;
+        }
+        if(theCheckBoxAnser === "duck" && theWineer ==="duck"){
+            myPoites += 100;
+            mYPoitis.innerHTML = `your pointes `+myPoites+``;
+        }
+        if(theCheckBoxAnser === "chick" && theWineer ==="chick"){
+            myPoites += 100;
+            mYPoitis.innerHTML = `your pointes `+myPoites+``;
+        }
+    }
+   
+    mYPoitis.innerHTML = `your pointes `+myPoites+``;
+
     let startSet = setInterval(startTheGamee, 1000);
-    /* startTheGame.addEventListener("click" , ()=>{
+    startTheGame.addEventListener("click" , ()=>{
       
-    }) */
+    })
 
     function startTheGamee(){
         run();
         check();
+        
     }
-
-    
 }
 
 

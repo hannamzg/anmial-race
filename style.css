@@ -109,3 +109,26 @@ body{
     color: white;
     cursor: pointer;
 }
+
+.DivchoseYourPlayer{
+    display: flex;
+    align-items: center;
+}
+
+.choseYourPlayer{
+    background-color: #ade8f4;
+    margin: 20px;
+}
+
+.H3choseYourPlayer{
+    font-size: 30px;
+    font-weight: 300;
+    color: white;
+}
+
+#mYPoitis{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 100px;
+}
