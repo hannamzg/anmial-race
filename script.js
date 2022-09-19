@@ -10,6 +10,7 @@ let mYPoitis = document.getElementById("mYPoitis");
 var theWineer = "";
 var theCheckBoxAnser ="";
 var myPoites = 0;
+let isFinish = false;
 
 
 
@@ -111,23 +112,27 @@ function buildImgs(){
           
         if(Number(str1) > Number(anmailDiv.offsetWidth) -80){
             alert("1 is win");
-            theWineer = "dog"
-            clearInterval(startSet);
+            theWineer = "dog";
+            isFinish = false;
+            /* clearInterval(soso); */
         }
         if(Number(str2) > Number(anmailDiv.offsetWidth) -80){
             alert("2 is win");
-            theWineer = "hourse"
-            clearInterval(startSet);
+            theWineer = "hourse";
+            isFinish = false;
+            /* clearInterval(soso); */
         }
         if(Number(str3) > Number(anmailDiv.offsetWidth) -80){
             alert("3 is win");
-            theWineer = "duck"
-            clearInterval(startSet);
+            theWineer = "duck";
+            isFinish = false;
+            /* clearInterval(soso); */
         }
         if(Number(str4) > Number(anmailDiv.offsetWidth) -80){
             alert("4 is win");
-            theWineer = "chick"
-            clearInterval(startSet);
+            theWineer = "chick";
+            isFinish = false;
+            /* clearInterval(soso); */
         }
 
         for(let i=0; i<choseYourPlayer.length; i++){
@@ -167,10 +172,19 @@ function buildImgs(){
    
     mYPoitis.innerHTML = `your pointes `+myPoites+``;
 
-    let startSet = setInterval(startTheGamee, 1000);
+    
     startTheGame.addEventListener("click" , ()=>{
-      
-    })
+        let soso =  setInterval(startTheGamee, 1000);
+        isFinish = true;
+        
+        setInterval(function(){
+            if(isFinish === false){
+            clearInterval(soso);
+        }
+        },1000)
+        
+    });
+   
 
     function startTheGamee(){
         run();
